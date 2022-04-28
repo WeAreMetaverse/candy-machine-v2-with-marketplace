@@ -62,7 +62,7 @@ const TopNav: React.FC<TopNavProps> = ({
           <Link to='/'>BH$WL</Link>
         </li>
         <li>
-          <Link to='/custom-token-marketplace'>Marketplace</Link>
+          <Link to='/custom-token-marketplace'>Marketplace V1</Link>
         </li>
         {/* <li>
         <Link to='/multi-collection-marketplace'>Multi Collection Marketplace</Link>
