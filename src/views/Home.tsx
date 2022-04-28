@@ -152,13 +152,28 @@ const ShimmerTitle = styled.h1`
   margin: 20px auto;
   text-transform: uppercase;
   animation: glow 2s ease-in-out infinite alternate;
-  color: var(--main-text-color);
+  color: var(--heading-text-color-1);
   @keyframes glow {
     from {
-      text-shadow: 0 0 20px var(--main-text-color);
+      text-shadow: 0 0 20px var(--heading-text-color-2);
     }
     to {
-      text-shadow: 0 0 30px var(--title-text-color), 0 0 10px var(--title-text-color);
+      text-shadow: 0 0 30px var(--heading-text-color-3), 0 0 10px var(--heading-text-color-2);
+    }
+  }
+`
+
+const ShimmerTitle2 = styled.h1`
+  margin: 20px auto;
+  text-transform: uppercase;
+  animation: glow 2s ease-in-out infinite alternate;
+  color: var(--heading-text-color-1);
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px var(--heading-text-color-2);
+    }
+    to {
+      text-shadow: 0 0 30px var(--heading-text-color-4), 0 0 10px var(--heading-text-color-4);
     }
   }
 `
@@ -195,7 +210,7 @@ const Home = (props: HomeProps) => {
   const [isSoldOut, setIsSoldOut] = useState(false)
   const [payWithSplToken, setPayWithSplToken] = useState(false)
   const [price, setPrice] = useState(0)
-  const [priceLabel, setPriceLabel] = useState<string>('SOL')
+  const [priceLabel, setPriceLabel] = useState<string>('BBX')
   const [whitelistPrice, setWhitelistPrice] = useState(0)
   const [whitelistEnabled, setWhitelistEnabled] = useState(false)
   const [isBurnToken, setIsBurnToken] = useState(false)
@@ -345,7 +360,7 @@ const Home = (props: HomeProps) => {
     if (hours > 0) {
       label += hours + ' hours '
     }
-    label += minutes + 1 + ' minutes left to MINT.'
+    label += minutes + 1 + ' minutes left to BUY.'
     return (
       <div>
         <h3>{label}</h3>
@@ -404,7 +419,7 @@ const Home = (props: HomeProps) => {
         if (!status?.err) {
           setAlertState({
             open: true,
-            message: 'Congratulations! Mint succeeded!',
+            message: 'Congratulations! Purchase succeeded!',
             severity: 'success',
           })
 
@@ -413,14 +428,14 @@ const Home = (props: HomeProps) => {
         } else {
           setAlertState({
             open: true,
-            message: 'Mint failed! Please try again!',
+            message: 'Purchase failed! Please try again!',
             severity: 'error',
           })
         }
       }
     } catch (error: any) {
       // TODO: blech:
-      let message = error.msg || 'Minting failed! Please try again!'
+      let message = error.msg || 'Purchase failed! Please try again!'
       if (!error.msg) {
         if (!error.message) {
           message = 'Transaction Timeout! Please try again.'
@@ -428,13 +443,13 @@ const Home = (props: HomeProps) => {
         } else if (error.message.indexOf('0x137')) {
           message = `SOLD OUT!`
         } else if (error.message.indexOf('0x135')) {
-          message = `Insufficient funds to mint. Please fund your wallet.`
+          message = `Insufficient funds to purchase. Fund your account, or complete items on the BlockLi$t to earn $BBX`
         }
       } else {
         if (error.code === 311) {
           message = `SOLD OUT!`
         } else if (error.code === 312) {
-          message = `Minting period hasn't started yet.`
+          message = `This sale isn't live yet.`
         }
       }
 
@@ -469,8 +484,9 @@ const Home = (props: HomeProps) => {
     <MintContainer>
       <DesContainer>
         <NFT elevation={3}>
-          <ShimmerTitle>MINT IS LIVE!</ShimmerTitle>
-          <h2>My NFT</h2>
+          <ShimmerTitle2>BLOCKHEAD$ WL</ShimmerTitle2>
+          <h2><em>EDITION ONE</em></h2>
+       
           <br />
           <div>
             <Price
@@ -480,7 +496,8 @@ const Home = (props: HomeProps) => {
                   : price + ' ' + priceLabel
               }
             />
-            <Image src='cool-cats.gif' alt='NFT To Mint' />
+            <Image src='BH$WL.gif' alt='BH$WL' />
+            <ShimmerTitle>Buy with $BBX</ShimmerTitle>
           </div>
           <br />
           {wallet &&
@@ -497,7 +514,7 @@ const Home = (props: HomeProps) => {
             isActive &&
             whitelistEnabled &&
             whitelistTokenBalance > 0 &&
-            !isBurnToken && <h3>You are whitelisted and allowed to mint.</h3>}
+            !isBurnToken && <h3>You are whitelisted and allowed to purchase.</h3>}
 
           {wallet && isActive && endDate && Date.now() < endDate.getTime() && (
             <Countdown
@@ -511,7 +528,7 @@ const Home = (props: HomeProps) => {
           )}
           {wallet && isActive && (
             <h3>
-              TOTAL MINTED : {itemsRedeemed} / {itemsAvailable}
+              TOTAL BOUGHT : {itemsRedeemed} / {itemsAvailable}
             </h3>
           )}
           {wallet && isActive && (
@@ -572,7 +589,7 @@ const Home = (props: HomeProps) => {
                 />
               )
             ) : (
-              <h1>Mint is private.</h1>
+              <h1>Sale is private.</h1>
             )}
           </MintButtonContainer>
           <br />
@@ -586,58 +603,79 @@ const Home = (props: HomeProps) => {
       <DesContainer>
         <Des elevation={2}>
           <LogoAligner>
-            <img src='logo.png' alt=''></img>
-            <GoldTitle>TITLE 1</GoldTitle>
+            <img src='./BlockHeadLoop.gif' width='40' height='BlockHead$'alt=''></img>
+            <GoldTitle>BH$WL EDITION ONE</GoldTitle>
           </LogoAligner>
+          <h4><em>Now on Sale</em></h4>
+          <br></br>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt.
+            - Limited to <strong>2000</strong> Tokens
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt.
+            - Price: <strong>150 BBX</strong>
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt.
-          </p>
+         
+          
         </Des>
+
         <Des elevation={2}>
           <LogoAligner>
-            <img src='logo.png' alt=''></img>
-            <GoldTitle>TITLE 2</GoldTitle>
+          <img src='./BlockHeadLoop.gif' width='40' height='BlockHead$'alt=''></img>
+            <GoldTitle>BH$WL EDITIONS</GoldTitle>
           </LogoAligner>
+          <h4><em>Edition 1 - 8</em></h4>
+          <br></br>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt.
+            - WhiteLi$t will be tiered across 8 Editions
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt.
+            - Each Edition has a <strong>reduced</strong> supply
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt.
+            - And an <strong>Increased</strong> Price
           </p>
         </Des>
+
         <Des elevation={2}>
           <LogoAligner>
-            <img src='logo.png' alt=''></img>
-            <GoldTitle>TITLE 3</GoldTitle>
+          <img src='./BlockHeadLoop.gif' width='40' height='BlockHead$'alt=''></img>
+            <GoldTitle>RAFFLES </GoldTitle>
           </LogoAligner>
+          <h4><em>Coming Soon</em></h4>
+          <br></br>
+          <p><strong>Enter Raffles to win:</strong></p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt.
+          - Limited Edition, Customised Nike x BBNF Sneakers
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt.
+          - BlockBoy 'n Friends Merch
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt.
+          - $BBX 💰
+          </p>
+          <p>
+          - More
           </p>
         </Des>
+
+        <Des elevation={2}>
+          <LogoAligner>
+          <img src='./BlockHeadLoop.gif' width='40' height='BlockHead$'alt=''></img>
+            <GoldTitle>NFT'S</GoldTitle>
+          </LogoAligner>
+          <h4><em>Coming Soon</em></h4>
+          <br></br>
+          <h2>Exclusive Art</h2>
+          <p>
+          - 1/1 Exclusive Art by CeeTheKreator
+          </p>
+          <p>
+          - 1/1 BlockHead$ PVP by CeeTheKreator
+          </p>
+        </Des>
+
+        
+        
       </DesContainer>
       <Snackbar
         open={alertState.open}

@@ -62,7 +62,7 @@ export const MintButton = ({
           setClicked(true);
           await requestGatewayToken();
         } else {
-          console.log('Minting...');
+          console.log('Purchasing...');
           await onMint();
         }
       }}

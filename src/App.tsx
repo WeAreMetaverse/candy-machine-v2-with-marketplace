@@ -74,12 +74,13 @@ const currencyOptions = [
     volumeDecimals: 1
   },
   {
-    currencySymbol: '56p',
-    treasuryMint: '56pdaHboK66cxRLkzkYVvFSAjfoNEETJUsrdmAYaTXMJ',
+    currencySymbol: 'BBX',
+    treasuryMint: 'FbUzTvXeHxPXKpZQHWMvoVXXW6aEhitfoakRttUBBzVx',
     currencyDecimals: 9,
-    priceDecimals: 2,
+    priceDecimals: 3,
     volumeDecimals: 1
   }
+  
 ];
 
 const App = () => {

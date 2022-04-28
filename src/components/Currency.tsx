@@ -14,14 +14,14 @@ interface CurrencyType {
 }
 
 const CurrencyContext = createContext<CurrencyType>({
-  currency: 'SOL',
+  currency: 'BBX',
   setCurrency: () => {},
   getCurrencySettings: () => {},
   currencyOptions: [{
-    currencySymbol: 'SOL',
-    treasuryMint: 'So11111111111111111111111111111111111111112',
+    currencySymbol: 'BBX',
+    treasuryMint: 'FbUzTvXeHxPXKpZQHWMvoVXXW6aEhitfoakRttUBBzVx',
     currencyDecimals: 9,
-    priceDecimals: 3,
+    priceDecimals: 1,
     volumeDecimals: 1
   }],
 });

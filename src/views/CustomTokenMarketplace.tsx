@@ -13,6 +13,9 @@ const NETWORK = process.env.REACT_APP_SOLANA_NETWORK! as Cluster
 
 const DesContainer = styled.div`
   width: 100%;
+  .candy-filter {
+    color: #fff;
+  }
 `
 
 const CustomTokenMarketplace: React.FC = () => {
@@ -26,7 +29,7 @@ const CustomTokenMarketplace: React.FC = () => {
       NETWORK,
       // pass additional settings param to configure shop display
       {
-        currencySymbol: 'LQN',
+        currencySymbol: 'BBX',
         currencyDecimals: 9,
         priceDecimals: 3,
         volumeDecimals: 1
@@ -38,14 +41,21 @@ const CustomTokenMarketplace: React.FC = () => {
     <DesContainer>
       <Stat
         candyShop={candyShopRef.current}
-        title={'Marketplace'}
-        description={'Candy Shop supports custom SPL tokens as currency. Just specify your token symbol and decimals.'}
+        title={'BlockHead$ Marketplace'}
+        description={'Limited edition merch, pre-mint perks, raffles and more'}
         style={{ paddingBottom: 50 }}
       />
       <Orders
         wallet={wallet}
         candyShop={candyShopRef.current}
         walletConnectComponent={<WalletMultiButton />}
+        // configure filter by collection
+        filters={[
+          {name: '1/1', identifier: -280213123 },
+          {name: 'ART', identifier: -280213123 },
+          {name: 'RAFFLES', identifier: -38328789 },
+          {name: 'MORE', identifier: -4546556 },
+        ]}
       />
     </DesContainer>
   )

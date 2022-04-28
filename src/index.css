@@ -1,34 +1,38 @@
 /* Customize your main colors in :root variables */
 :root {
-  --main-background-color: #343a50;
-  --card-background-color: #51576d;
-  --card-background-lighter-color: #7a7f92;
+  --main-background-color: #161616;
+  --card-background-color: #000;
+  --card-background-lighter-color: #ccc;
   --main-text-color: #f7f6f4;
-  --title-text-color: #3cba8b;
+  --title-text-color: gold;
+  --heading-text-color-1: #000;
+  --heading-text-color-2: rgb(38, 159, 228);
+  --heading-text-color-3: rgb(163, 28, 10);
+  --heading-text-color-4: gold;
 }
 
 body {
-  background-color: var(--main-background-color);
-  /*background: url('img/background.png');
-  background-size: cover; */
+  /* background-color: var(--main-background-color); */
+  background: url('img/background.png');
+  background-size: cover; 
 
   margin: 0;
-  font-family: 'Helvetica', Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size:  16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #303030;
+  background-color: #161616;
   color: #FFFFFF;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
   text-decoration: none;
+  font-weight: bold;
 }
 
 h2,
