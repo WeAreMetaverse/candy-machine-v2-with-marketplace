@@ -648,7 +648,7 @@ const Home = (props: HomeProps) => {
           - Limited Edition, Customised Nike x BBNF Sneakers
           </p>
           <p>
-          - BlockBoy 'n Friends Merch
+          - BlockBoy 'n Friend$ Merch
           </p>
           <p>
           - $BBX 💰
@@ -670,7 +670,7 @@ const Home = (props: HomeProps) => {
           - 1/1 Exclusive Art by CeeTheKreator
           </p>
           <p>
-          - 1/1 BlockHead$ PVP by CeeTheKreator
+          - 1/1 BlockHead$ PFP by CeeTheKreator
           </p>
         </Des>
 
