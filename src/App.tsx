@@ -67,20 +67,19 @@ const theme = createTheme({
 // Used for a multi-currency shop
 const currencyOptions = [
   {
-    currencySymbol: 'SOL',
-    treasuryMint: 'So11111111111111111111111111111111111111112',
-    currencyDecimals: 9,
-    priceDecimals: 3,
-    volumeDecimals: 1
-  },
-  {
     currencySymbol: 'BBX',
     treasuryMint: 'FbUzTvXeHxPXKpZQHWMvoVXXW6aEhitfoakRttUBBzVx',
     currencyDecimals: 9,
     priceDecimals: 3,
     volumeDecimals: 1
+  },
+  {
+    currencySymbol: 'SOL',
+    treasuryMint: 'So11111111111111111111111111111111111111112',
+    currencyDecimals: 9,
+    priceDecimals: 3,
+    volumeDecimals: 1
   }
-  
 ];
 
 const App = () => {
