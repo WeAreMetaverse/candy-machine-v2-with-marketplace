@@ -41,8 +41,8 @@ const CustomTokenMarketplace: React.FC = () => {
     <DesContainer>
       <Stat
         candyShop={candyShopRef.current}
-        title={'BlockHead$ Marketplace - COMING SOON'}
-        description={'Limited edition merch, pre-mint perks, raffles and more COMING SOON'}
+        title={'BlockHead$ Marketplace - Closed Alpha'}
+        description={'Limited edition merch, pre-mint perks, raffles and more'}
         style={{ paddingBottom: 50 }}
       />
       <Orders
