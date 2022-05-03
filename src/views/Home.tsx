@@ -20,6 +20,16 @@ import {
 import { MintButton } from '../components/MintButton'
 import { AlertState, getAtaForMint, toDate } from '../utils/utils'
 
+// Global site tag (gtag.js) - Google Analytics
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QLHQX3EKLG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QLHQX3EKLG');
+</script>
+
 const cluster = process.env.REACT_APP_SOLANA_NETWORK!.toString()
 const decimals = process.env.REACT_APP_SPL_TOKEN_TO_MINT_DECIMALS
   ? +process.env.REACT_APP_SPL_TOKEN_TO_MINT_DECIMALS!.toString()
