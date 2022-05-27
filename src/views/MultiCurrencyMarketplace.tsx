@@ -50,7 +50,7 @@ const MultiCurrencyMarketplace: React.FC = () => {
         candyShop={candyShop}
         title={"Marketplace"}
         description={
-          "Buy your BlockHead$ Whitelist tokens here using $BBX or $SOL! Select your preferred currency in the top right to see listings in that currency. If you would like to trade your WL Token, then go to marketplace.block-heads.io/sell-multi-currency"
+          "Buy your BlockHead$ Whitelist tokens here using $BBX or $SOL! Select your preferred currency in the top right to see listings in that currency."
         }
         style={{ paddingBottom: 50 }}
       />

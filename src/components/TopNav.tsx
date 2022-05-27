@@ -61,14 +61,17 @@ const TopNav: React.FC<TopNavProps> = ({
         <li>
           <Link to='/'>BH$WL</Link>
         </li>
-        <li>
-          <Link to='/custom-token-marketplace'>Marketplace V1</Link>
-        </li>
         {/* <li>
-        <Link to='/multi-collection-marketplace'>Multi Collection Marketplace</Link>
+          <Link to='/custom-token-marketplace'>Marketplace</Link>
         </li> */}
         <li>
-          <Link to='/sell'>Sell</Link>
+        <Link to='/multi-currency-marketplace'>Marketplace</Link>
+        </li>
+        <li>
+        <Link to='/multi-collection-marketplace'>Store</Link>
+        </li>
+        <li>
+          <Link to='/multi-currency-sell'>Sell</Link>
         </li>
         {/* <DropdownAnchor ref={anchorRef} onClick={handleToggle}>
           Other Layouts

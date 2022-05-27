@@ -79,6 +79,13 @@ const currencyOptions = [
     currencyDecimals: 9,
     priceDecimals: 3,
     volumeDecimals: 1
+  },
+  {
+    currencySymbol: 'USDC',
+    treasuryMint: 'BXXkv6z8ykpG1yuvUDPgh732wzVHB69RnB9YgSYh3itW',
+    currencyDecimals: 6,
+    priceDecimals: 3,
+    volumeDecimals: 1
   }
 ];
 
@@ -179,7 +186,7 @@ const App = () => {
                       }
                     />
                     <Route
-                      path='/multi-currency-marketplace'
+                      path='/marketplace-v2'
                       element={
                         <>
                           <TopNav showCurrencyToggle={true} />
