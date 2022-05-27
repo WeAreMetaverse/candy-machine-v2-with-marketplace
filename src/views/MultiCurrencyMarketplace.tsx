@@ -48,7 +48,7 @@ const MultiCurrencyMarketplace: React.FC = () => {
     <DesContainer>
       <Stat
         candyShop={candyShop}
-        title={"Marketplace"}
+        title={"Marketplace v1.1"}
         description={
           "Buy your BlockHead$ Whitelist tokens here using $BBX or $SOL! Select your preferred currency in the top right to see listings in that currency."
         }
