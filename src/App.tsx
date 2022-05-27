@@ -80,13 +80,13 @@ const currencyOptions = [
     priceDecimals: 3,
     volumeDecimals: 1
   },
-  {
-    currencySymbol: 'USDC',
-    treasuryMint: 'BXXkv6z8ykpG1yuvUDPgh732wzVHB69RnB9YgSYh3itW',
-    currencyDecimals: 6,
-    priceDecimals: 3,
-    volumeDecimals: 1
-  }
+  // {
+  //   currencySymbol: 'USDC',
+  //   treasuryMint: 'BXXkv6z8ykpG1yuvUDPgh732wzVHB69RnB9YgSYh3itW',
+  //   currencyDecimals: 6,
+  //   priceDecimals: 3,
+  //   volumeDecimals: 1
+  // }
 ];
 
 const App = () => {
