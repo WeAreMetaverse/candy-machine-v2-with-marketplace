@@ -67,9 +67,9 @@ const TopNav: React.FC<TopNavProps> = ({
         {/* <li>
         <Link to='/multi-collection-marketplace'>Multi Collection Marketplace</Link>
         </li> */}
-        {/* <li>
+        <li>
           <Link to='/sell'>Sell</Link>
-        </li> */}
+        </li>
         {/* <DropdownAnchor ref={anchorRef} onClick={handleToggle}>
           Other Layouts
           <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
