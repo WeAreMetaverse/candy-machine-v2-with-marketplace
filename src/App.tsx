@@ -186,7 +186,7 @@ const App = () => {
                       }
                     />
                     <Route
-                      path='/marketplace-v2'
+                      path='/multi-currency-marketplace'
                       element={
                         <>
                           <TopNav showCurrencyToggle={true} />
